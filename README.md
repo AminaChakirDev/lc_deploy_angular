@@ -1,27 +1,37 @@
-# SoutienAngularRouting
+# Angular-Routing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+Dans cet atelier, nous allons mettre en place un système de navigation au sein d'une application de films et série télé.
 
-## Development server
+L'application est composée de cinq components :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- `MoviesListComponent` : pour l'affichage des films
+- `MovieComponent` : qui affichera le détail d'un film
+- `TvShowsListComponent` : pour l'affichage des séries
+- `TvShowComponent` : qui affichera le détail d'une série
+- `NavbarComponent` : barre de menu pour la navigation entre les components `MoviesListComponent` et `TvShowsListComponent`
 
-## Code scaffolding
+**Les requêtes API sont déjà présentes dans le service `ApiService`, nous allons nous concentrer sur  la navigation uniquement.**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prérequis
 
-## Build
+- Cloner le repository
+- `npm install` à la racine du projet
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Partie 1
 
-## Running unit tests
+- Créer une route qui affiche le `MoviesListComponent` en page d'accueil .
+- Créer une route `/tvshows` qui affiche le `TvShowsListComponent`.
+- Utiliser le  `NavbarComponent` pour naviguer d'une page à l'autre via des liens
+- Créer une route `/movies/:id` qui affiche le `MovieComponent`.
+- Créer une route `/tvshows/:id` qui affiche le `TvShowComponent`.
+- Intégrer un lien autour de chaque film afin de rediriger le visiteur vers la page `/movies/:id`.
+- Intégrer un lien autour de chaque série afin de rediriger le visiteur vers la page `/tvshow/:id`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Bravo, tu as réussi à mettre en place une navigation au sein de ton application. Tu l'auras remarqué, les pages `MovieComponent` et `TvShowComponent` affichent la même information, quelque soit le film ou la série cliqué. Nous allons, dans la partie 2, personnaliser l'affichage en fonction du choix de l'utilisateur**
 
-## Running end-to-end tests
+## Partie 2
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Au sein du `MovieComponent`, récupère le paramètre `id` du film et utilise la méthode `getMovieById()` pour récupérer ses informations.
+- De même, au sein du `TvShowComponent`, récupère le paramètre `id` de la série et utilise la méthode `getTvShowById()` pour récupérer ses informations.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Allez les devs Gones !
