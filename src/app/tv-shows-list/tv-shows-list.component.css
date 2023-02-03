@@ -1,0 +1,14 @@
+.tvshows-container {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.tvshow-container p {
+  font-size: 12px;
+  color: grey;
+}
+
+h2 {
+  padding-bottom: 8px;
+}
