@@ -1,9 +1,10 @@
 <p>Page d'un film</p>
-<!-- <div *ngIf="currentMovie">
+<p *ngIf="!currentMovie">En cours de chargement</p>
+<div *ngIf="currentMovie">
   <img
     [src]="'https://image.tmdb.org/t/p/w200/' + currentMovie.poster_path"
     alt="affiche du film"
     loading="lazy"
   />
   <p>Sorti le {{ currentMovie.release_date | date : "dd/MM/YYYY" }}</p>
-</div> -->
+</div>

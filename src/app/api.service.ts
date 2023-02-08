@@ -29,7 +29,7 @@ export class ApiService {
 
   getTvShowById(tvShowId: number) {
     return this.http.get<any>(
-      `https://api.themoviedb.org/3/movie/
+      `https://api.themoviedb.org/3/tv/
         ${tvShowId}
         ?api_key=b57985ea6074227451ffbe0942972344&language=fr-FR`
     );
