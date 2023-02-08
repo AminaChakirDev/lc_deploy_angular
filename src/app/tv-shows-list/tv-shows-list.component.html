@@ -1,1 +1,11 @@
-<p>tv-shows-list works!</p>
+<h2>Séries</h2>
+<div class="tvshows-container">
+  <div class="tvshow-container" *ngFor="let tvShow of tvShows">
+    <a [routerLink]="['/tvshows', tvShow.id]">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w92/' + tvShow.poster_path"
+        alt="affiche de la série"
+      />
+    </a>
+  </div>
+</div>

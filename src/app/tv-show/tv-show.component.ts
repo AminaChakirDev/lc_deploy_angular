@@ -18,9 +18,9 @@ export class TvShowComponent {
     // Récupérer le paramètre id
   }
 
-  getTvShowByIdFromService(movieId: number) {
+  getTvShowByIdFromService(id: number) {
     this.apiService
-      .getTvShowById(movieId)
+      .getTvShowById(id)
       .subscribe((data) => (this.currentTvShow = data));
   }
 }

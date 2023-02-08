@@ -7,7 +7,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./tv-shows-list.component.css'],
 })
 export class TvShowsListComponent {
-  tvShows: {}[] = [];
+  tvShows: { id: number; poster_path: string }[] = [];
 
   constructor(private apiService: ApiService) {}
 
@@ -16,8 +16,9 @@ export class TvShowsListComponent {
   }
 
   getTvShowsFromService() {
-    this.apiService
-      .getTvShows()
-      .subscribe((data) => (this.tvShows = data.results));
+    this.apiService.getTvShows().subscribe((data) => {
+      this.tvShows = data.results;
+      console.log(this.tvShows);
+    });
   }
 }

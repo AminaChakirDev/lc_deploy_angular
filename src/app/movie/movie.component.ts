@@ -4,23 +4,21 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  styleUrls: ['./movie.component.css'],
 })
 export class MovieComponent {
   movieId!: number;
   currentMovie!: { poster_path: string; release_date: string };
 
-  constructor(
-    private apiService: ApiService
-  ) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     // Récupérer le paramètre id
   }
 
-  getMovieByIdFromService(movieId: number) {
+  getMovieByIdFromService(id: number) {
     this.apiService
-      .getMovieById(movieId)
+      .getMovieById(id)
       .subscribe((data) => (this.currentMovie = data));
   }
 }

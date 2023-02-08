@@ -1,7 +1,7 @@
 <h2>Films</h2>
 <div class="movies-container">
   <div class="movie-container" *ngFor="let movie of movies">
-    <a [routerLink]="[movie.id]">
+    <a [routerLink]="['movies', movie.id]">
       <img
         [src]="'https://image.tmdb.org/t/p/w92/' + movie.poster_path"
         alt="affiche du film"
