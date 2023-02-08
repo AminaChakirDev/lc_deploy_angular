@@ -15,12 +15,12 @@ const routes: Routes = [
     component: TvShowsListComponent,
   },
   {
-    path: "movies/:id",
-    component: MovieComponent
+    path: 'movies/:movieId',
+    component: MovieComponent,
   },
   {
-    path: "tvshows/:id",
-    component: TvShowComponent
+    path: 'tvshows/:id',
+    component: TvShowComponent,
   },
 ];
 
