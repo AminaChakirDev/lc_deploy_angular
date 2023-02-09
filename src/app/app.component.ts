@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'soutien_angular_routing';
+  title = 'lc_deploy_angular';
 }

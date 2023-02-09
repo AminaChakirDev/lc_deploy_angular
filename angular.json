@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "soutien_angular_routing": {
+    "lc_deploy_angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/soutien_angular_routing",
+            "outputPath": "dist/lc_deploy_angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "soutien_angular_routing:build:production"
+              "browserTarget": "lc_deploy_angular:build:production"
             },
             "development": {
-              "browserTarget": "soutien_angular_routing:build:development"
+              "browserTarget": "lc_deploy_angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "soutien_angular_routing:build"
+            "browserTarget": "lc_deploy_angular:build"
           }
         },
         "test": {
